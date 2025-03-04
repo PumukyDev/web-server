@@ -5,14 +5,26 @@ use App\Http\Controllers\UrlShortenerController;
 use App\Http\Controllers\UserListController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
+use App\Events\testingEvent;
 
 Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/eraufi', function () {
+    return view('eraufi');
+});
+
+Route::get('test', function () {
+    event(new testingEvent);
+    return 'done';
+});
+
 Route::get('/chat', [UserListController::class, 'index'])->middleware('auth')->name('chat');
 Route::get('/message/{id}', [MessageController::class, 'showForm'])->name('message.form');
 Route::post('/message/{id}', [MessageController::class, 'storeMessage'])->name('message.store');
+
+
 
 
 //Route::get('/dashboard', function () {

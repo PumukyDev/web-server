@@ -14,7 +14,8 @@ output=$(/usr/bin/curl -X 'POST' \
     "pumukydev.com",
     "www.pumukydev.com",
     "grafana.pumukydev.com",
-    "url-shortener.pumukydev.com"
+    "url-shortener.pumukydev.com",
+    "stream.pumukydev.com"
   ],
   "description": "Dynamic DNS"
 }')

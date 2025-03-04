@@ -38,9 +38,12 @@ RUN apt-get -y install --fix-missing \
     nodejs \
     npm
 
+# Reverb dependencies
+RUN docker-php-ext-install pcntl
+RUN docker-php-ext-configure pcntl --enable-pcntl
+
 # Clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
 
 # Add any additional configurations or adjustments as needed
 
