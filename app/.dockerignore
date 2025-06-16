@@ -1,0 +1,4 @@
+Dockerfile
+.env.example
+.dockerignore
+__pycache__

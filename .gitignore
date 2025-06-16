@@ -1,5 +1,2 @@
-.vagrant/
 .env
-**.htpasswd
-certs/
-ssh/
+__pycache__

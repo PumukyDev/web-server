@@ -1,0 +1,13 @@
+services:
+  web:
+    build: ./app
+    restart: unless-stopped
+    container_name: flask_shortener
+    env_file:
+      - ./app/.env
+    networks:
+      - proxy-network
+
+networks:
+  proxy-network:
+    external: true

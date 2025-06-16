@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>url shortener</title>
+        <link rel="icon" href="/static/favicon.png" type="image/png">
+    </head>
+    <body>
+        <section>
+            <div>
+                <h1>url shortener - IN DEVELOPMENT</h1>
+
+                <form method="POST">
+                    <label for="url">Enter your URL:</label>
+                    <input type="text" id="url" name="url" placeholder="Enter the URL here" required/>
+                    <button type="submit">shortener URL</button>
+                </form>
+
+                {% if short_url %}
+                    <h2>Your short URL:</h2>
+                    <p>
+                        <a href="{{ short_url }} " target="_blank">{{ short_url }}</a>
+                    </p>
+                {% endif %}
+            </div>
+        </section>
+    </body>
+</html>
